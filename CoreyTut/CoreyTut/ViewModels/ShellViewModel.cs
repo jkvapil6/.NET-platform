@@ -86,5 +86,13 @@ namespace CoreyTut.ViewModels
         {
             ActivateItem(new SecondChildViewModel());
         }
+
+        public void AddPerson()
+        {
+            if (!String.IsNullOrWhiteSpace(FirstName) && !String.IsNullOrWhiteSpace(LastName))
+            {
+                People.Add(new PersonModel { FirstName = FirstName, LastName = LastName });
+            }
+        }
     }
 }

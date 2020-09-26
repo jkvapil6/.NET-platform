@@ -27,6 +27,7 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
@@ -45,7 +46,7 @@
             MinWidth="200"
             Grid.Row="2"
             Grid.Column="1"
-         />
+        />
 
         <!-- Row 3 -->
         <TextBox 
@@ -53,48 +54,55 @@
             MinWidth="200"
             Grid.Row="3"
             Grid.Column="1"
-         />
+        />
+
+        <Button 
+            x:Name="AddPerson"
+            Grid.Row="4"
+            Grid.Column="1"
+            Content="Add Person"
+        />
 
         <!-- Row 4 -->
         <ComboBox
             x:Name="People"
             SelectedItem="{Binding Path=SelectedPerson, Mode=OneWayToSource}"
             DisplayMemberPath="FirstName"
-            Grid.Row="4"
+            Grid.Row="5"
             Grid.Column="1"
         />
 
         <!-- Row 4 -->
         <TextBlock 
-            Grid.Row="4" 
+            Grid.Row="5" 
             Grid.Column="2"
             x:Name="SelectedPerson_LastName"
         />
 
         <Button
             x:Name="ClearText"
-            Grid.Row="5"
+            Grid.Row="6"
             Grid.Column="1"
             Content="Clear Text"
-         />
+        />
 
         <Button
             x:Name="LoadPageOne"
-            Grid.Row="6"
+            Grid.Row="7"
             Grid.Column="1"
             Content="Load First Page"
-         />
+        />
         
         <Button
             x:Name="LoadPageTwo"
-            Grid.Row="7"
+            Grid.Row="8"
             Grid.Column="1"
             Content="Load Second Page"
-         />
+        />
         
         <ContentControl
             Height="300"
-            Grid.Row="8"
+            Grid.Row="9"
             Grid.Column="1"
             Grid.ColumnSpan="5"
             x:Name="ActiveItem"
